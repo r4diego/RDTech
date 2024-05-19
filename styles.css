@@ -1,0 +1,243 @@
+/* Estilos comuns para todos os dispositivos */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: royalblue; /* Background geral azul royal */
+    color: white; /* Texto branco para melhor contraste */
+    font-size: 16px; /* Tamanho de fonte padrão */
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #333;
+    padding: 20px;
+    color: white;
+}
+
+.logo img {
+    width: 100px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    position: relative;
+}
+
+nav ul li {
+    margin-left: 20px;
+    position: relative;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+}
+
+nav ul li a:hover {
+    color: #f0a500;
+}
+
+.contact-menu .dropdown {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: -50px; /* Move o menu 50 pixels para a esquerda */
+    background-color: #444;
+    padding: 10px;
+    border-radius: 5px;
+    width: 200px; /* Ajuste a largura do menu flutuante */
+}
+
+.contact-menu:hover .dropdown {
+    display: block;
+}
+
+.contact-menu .dropdown li {
+    margin: 5px 0;
+}
+
+.contact-menu .dropdown li a {
+    color: white;
+    font-size: 16px;
+    white-space: nowrap; /* Evita que o texto seja dividido em duas linhas */
+}
+
+.contact-menu .dropdown li a:hover {
+    color: #f0a500;
+}
+
+main {
+    padding: 20px;
+}
+
+#about {
+    background-color: white; /* Fundo branco para a caixa de texto */
+    color: black; /* Texto preto para contraste na caixa */
+    padding: 20px;
+    border-radius: 10px;
+    border: 1px solid lightgray; /* Borda cinza claro */
+    max-width: 800px;
+    margin: 40px auto;
+    text-align: center; /* Centraliza o texto na caixa */
+}
+
+footer {
+    background-color: #333; /* Mesma cor do cabeçalho */
+    color: white;
+    text-align: center;
+    padding: 20px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+.description {
+    background-color: #f0f0f0; /* Fundo cinza claro */
+    padding: 10px; /* Espaçamento interno */
+    text-align: center; /* Centraliza o texto */
+}
+
+.description p {
+    margin-bottom: 10px; /* Espaçamento inferior do parágrafo */
+}
+
+.description button {
+    padding: 5px 10px; /* Espaçamento interno do botão */
+    background-color: #333; /* Cor de fundo do botão */
+    color: white; /* Cor do texto do botão */
+    border: none; /* Sem borda */
+    cursor: pointer; /* Cursor ao passar o mouse */
+}
+
+.description button:hover {
+    background-color: #555; /* Cor de fundo do botão ao passar o mouse */
+}
+
+/* Estilos para os serviços */
+.service {
+    margin-bottom: 40px; /* Espaço entre os serviços */
+    text-align: center; /* Centraliza o conteúdo */
+}
+
+.service h2 {
+    margin-bottom: 20px; /* Espaço entre o título e a descrição */
+}
+
+.service .description {
+    background-color: #f0f0f0; /* Fundo cinza claro */
+    padding: 10px; /* Espaçamento interno */
+    margin: 0 100px 20px 100px; /* Margem nos lados de 100px e abaixo de 20px */
+    color: black; /* Cor do texto da descrição */
+    max-width: 650px; /* Largura máxima de 650px */
+    width: 80vw; /* Largura de 80% da largura da janela de visualização */
+    margin-left: auto; /* Centraliza a caixa */
+    margin-right: auto; /* Centraliza a caixa */
+}
+
+.service .description p {
+    margin-bottom: 10px; /* Espaçamento entre as linhas de descrição */
+}
+
+.service button {
+    padding: 10px 20px; /* Espaçamento interno do botão */
+    background-color: #333; /* Cor de fundo do botão */
+    color: white; /* Cor do texto do botão */
+    border: none; /* Sem borda */
+    cursor: pointer; /* Cursor ao passar o mouse */
+}
+
+.service button:hover {
+    background-color: #555; /* Cor de fundo do botão ao passar o mouse */
+}
+
+.services-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.service {
+    flex: 1 1 300px;
+    margin: 20px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    text-align: center;
+    background-color: #fff;
+}
+
+.service h2 {
+    margin-bottom: 10px;
+}
+
+.service-description {
+    margin-top: 20px;
+    color: black;
+}
+
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #333;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.btn:hover {
+    background-color: #555;
+}
+
+/* Media Queries para Responsividade */
+
+/* Estilos para telas menores que 768px (como smartphones em modo retrato) */
+@media only screen and (max-width: 767px) {
+    body {
+        font-size: 14px; /* Reduz o tamanho da fonte para melhor legibilidade em telas menores */
+    }
+
+    .logo img {
+        width: 80px;
+    }
+
+    header {
+        flex-direction: column; /* Altera a direção do flex para uma coluna */
+        align-items: center; /* Centraliza os itens */
+    }
+
+    nav ul {
+        flex-direction: row; /* Altera a direção do flex para uma linha */
+        margin-top: 10px; /* Espaçamento entre a logo e os botões */
+    }
+
+    nav ul li {
+        margin: 0 10px; /* Espaçamento entre os itens */
+    }
+
+    .contact-menu .dropdown {
+        left: 0; /* Alinha o menu flutuante à esquerda */
+    }
+
+    .service .description {
+        margin: 0 auto 20px auto; /* Margem automática nos lados e abaixo */
+        max-width: 80%; /* Largura máxima de 80% */
+    }
+
+    .services-container {
+        flex-direction: column; /* Altera a direção do flex para uma coluna */
+        align-items: center; /* Centraliza os itens */
+    }
+
+    .service {
+        width: 90%; /* Largura maior para ocupar mais espaço */
+    }
+}
